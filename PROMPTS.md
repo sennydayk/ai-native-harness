@@ -5,7 +5,7 @@
 ```bash
 git status >/dev/null 2>&1 || git init -q
 git add -A && git commit -qm "init: 제공 원본" --allow-empty
-git clone --depth 1 https://github.com/<계정>/ai-native-harness harness && rm -rf harness/.git
+git clone --depth 1 https://github.com/sennydayk/ai-native-harness harness && rm -rf harness/.git
 [ -f AGENTS.md ] && cat harness/AGENTS.md >> AGENTS.md || cp harness/AGENTS.md .
 git add -A && git commit -qm "chore: 작업 하네스 추가"
 # (허용 확인된 경우만) mkdir -p ~/.codex/skills && cp -r harness/skills/* harness/third_party/* ~/.codex/skills/

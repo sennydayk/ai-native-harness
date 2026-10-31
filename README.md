@@ -13,7 +13,7 @@ AI 코딩 에이전트(Codex CLI 등)와 함께 **3시간 안팎의 실무형 �
 
 ## 빠른 시작
 ```bash
-git clone --depth 1 https://github.com/<계정>/ai-native-harness harness && rm -rf harness/.git   # 중첩 git 방지
+git clone --depth 1 https://github.com/sennydayk/ai-native-harness harness && rm -rf harness/.git   # 중첩 git 방지
 cp harness/AGENTS.md .            # 과제에 AGENTS.md가 이미 있으면: cat harness/AGENTS.md >> AGENTS.md
 # (선택) Codex 스킬 디렉터리를 쓸 수 있는 환경이면: mkdir -p ~/.codex/skills && cp -r harness/skills/* ~/.codex/skills/
 ```
