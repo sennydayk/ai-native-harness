@@ -13,10 +13,11 @@ AI 코딩 에이전트(Codex CLI 등)와 함께 **3시간 안팎의 실무형 �
 
 ## 빠른 시작
 ```bash
-git clone https://github.com/<계정>/ai-native-harness harness
+git clone --depth 1 https://github.com/<계정>/ai-native-harness harness && rm -rf harness/.git   # 중첩 git 방지
 cp harness/AGENTS.md .            # 과제에 AGENTS.md가 이미 있으면: cat harness/AGENTS.md >> AGENTS.md
 # (선택) Codex 스킬 디렉터리를 쓸 수 있는 환경이면: mkdir -p ~/.codex/skills && cp -r harness/skills/* ~/.codex/skills/
 ```
+- 단계별 프롬프트는 `harness/PROMPTS.md`
 - 템플릿은 필요할 때 `harness/templates/`에서 루트로 복사한다.
 - 스킬 기능이 없는 환경에서도 AGENTS.md의 **스킬 목차**를 통해 에이전트가 해당 SKILL.md를 읽고 따른다.
 
@@ -44,6 +45,7 @@ cp harness/AGENTS.md .            # 과제에 AGENTS.md가 이미 있으면: cat
 ## 구성
 ```
 AGENTS.md            항상 적용되는 작업 원칙 + 스킬 목차
+PROMPTS.md           단계별 프롬프트 셋
 skills/<name>/       직접 작성한 스킬 15개 (SKILL.md, e2e-check는 테스트 템플릿 포함)
 templates/           BRIEF, INTERVIEW, DOMAIN, PLAN, DECISIONS, RISKS, HANDOFF, USER_GUIDE, E2E_RESULT
 third_party/         공개 스킬 사본 (출처·커밋·라이선스는 third_party/README.md)
